@@ -38,20 +38,45 @@ Furthermore BitOps is a customizable platform that provides two distinct forms o
     - The Jist is; Plugins are wrappers around common IaC tools, which provide BitOps functionality for that specific tool
 
 
-# Content - The V2 release + Plugins
+# Content - Plugins and V2
 
 ## Content section 1 - V2 effort
 
-Explain why we rewrote BitOps
+*Explain why we rewrote BitOps*
+The BitOps rewrite was inspired by 2 core upgrades we wanted to make; 
+1. The adoption of a true programming language for BitOps
+2. The ability to support arbitrary community driven development through Plugins
 
-Explain the benefits to the upgrade
 
+*Explain the benefits to the upgrade*
+The V2 upgrade accomplishes both of our goals of utilizing a higher level programming language, Python, for our source, as well as supporting arbitrary tool support via plugins. 
+
+Rewritting BitOps from bash into Python has opened up development and testing opportunities for ourselves and our community. For example, the BitOps steering committee has begun talking about a Python library that will enable advanced workflow execution for BitOps.
+
+Additionally with plugins we now have arbitrary tool execution. With the V2 release, we have launched 4 supported plugins for the tools; Terraform, Ansible, Helm and Cloudformation, as well as the AWS cloud provider. Users can choose to use one of our supported tool plugins, or write their own!
 
 
 ## Content section 2 - Plugins
 
+*What are plugins?*
+BitOps Plugins are a way of creating a set of installation and deployment instructions that can be invoked by BitOps during its runtime. The plugins themselves only provide functionality, it is up to BitOps to invoke that functionality appropriately.
+
+*What plugins does Bitovi support?*
+BitOps has supported plugins which are wrappers around some of the most widely used IaC tools such as; 
+- Terraform
+- Ansible
+- Helm
+- Cloudformation
+
+As well as support for the worlds most widely used cloudprovider; 
+- AWS
 
 
+What plugins are coming?
+The BitOps road map is still being discussed and created. On the horizon we are already eyeing a few more supported plugins and cloudproviders including; 
 
+- Kubernetes
+- Google Cloud
+- Azure
 
-# Content - Quick demo
+If you have a tool you'd like to request, please message the BitOps dev team in the Bitovi community Slack - BitOps channel!
